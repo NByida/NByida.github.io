@@ -79,14 +79,14 @@
 
 
 
-<meta name="description" content="1:%s&#x2F;from&#x2F;to&#x2F;g">
+<meta name="description" content="从windows生成sql文件 123mysql -u root -puse databasesource backup.sql 过程中一直报错，说表不存在，后面发现是两个数据库版本不一致导致建表语句不一样 解决方法 1234567报错原因：生成转储文件的数据库版本为8.0,要导入sql文件的数据库版本为5.6,因为是高版本导入到低版本，引起1273错误解决方法：打开sql文件，将文件中的所有ut">
 <meta property="og:type" content="article">
-<meta property="og:title" content="vim替换命令">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;22&#x2F;vim%E6%9B%BF%E6%8D%A2%E5%91%BD%E4%BB%A4&#x2F;index.html">
+<meta property="og:title" content="数据库数据导出">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;22&#x2F;%E6%95%B0%E6%8D%AE%E5%BA%93%E6%95%B0%E6%8D%AE%E5%AF%BC%E5%87%BA&#x2F;index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="1:%s&#x2F;from&#x2F;to&#x2F;g">
+<meta property="og:description" content="从windows生成sql文件 123mysql -u root -puse databasesource backup.sql 过程中一直报错，说表不存在，后面发现是两个数据库版本不一致导致建表语句不一样 解决方法 1234567报错原因：生成转储文件的数据库版本为8.0,要导入sql文件的数据库版本为5.6,因为是高版本导入到低版本，引起1273错误解决方法：打开sql文件，将文件中的所有ut">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-11-14T01:55:40.094Z">
+<meta property="og:updated_time" content="2019-10-09T04:13:59.625Z">
 <meta name="twitter:card" content="summary">
 
 
@@ -117,13 +117,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/11/22/vim替换命令/"/>
+  <link rel="canonical" href="http://yoursite.com/2019/11/22/数据库数据导出/"/>
 
 
 
 
 
-  <title>vim替换命令 | Hexo</title>
+  <title>数据库数据导出 | Hexo</title>
   
 
 
@@ -230,7 +230,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/22/vim%E6%9B%BF%E6%8D%A2%E5%91%BD%E4%BB%A4/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/22/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%95%B0%E6%8D%AE%E5%AF%BC%E5%87%BA/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="John Doe">
@@ -247,7 +247,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">vim替换命令</h1>
+          <h1 class="post-title" itemprop="name headline">数据库数据导出</h1>
         
 
         <div class="post-meta">
@@ -259,7 +259,7 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-11-22T19:02:28+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-11-22T19:07:40+08:00">
                 2019-11-22
               </time>
             
@@ -297,7 +297,16 @@
       
 
       
-        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">:%s/from/to/g</span><br></pre></td></tr></table></figure>
+        <p>从windows生成sql文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mysql -u root -p</span><br><span class="line">use database</span><br><span class="line">source backup.sql</span><br></pre></td></tr></table></figure>
+<p>过程中一直报错，说表不存在，后面发现是两个数据库版本不一致<br>导致建表语句不一样</p>
+<h6>解决方法
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">报错原因：</span><br><span class="line">生成转储文件的数据库版本为8.0,要导入sql文件的数据库版本为5.6,因为是高版本导入到低版本，引起1273错误</span><br><span class="line"></span><br><span class="line">解决方法：</span><br><span class="line">打开sql文件，将文件中的所有</span><br><span class="line">utf8mb4_0900_ai_ci替换为utf8_general_ci</span><br><span class="line">utf8mb4替换为utf8</span><br></pre></td></tr></table></figure>
+vim 替换方法
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">%s/utf8mb4_0900_ai_ci/utf8_general_ci/g</span><br><span class="line"></span><br><span class="line">s代表全文  后接原文 再接目标文字 g表示替换</span><br></pre></td></tr></table></figure>
+
+<p><a href="https://blog.csdn.net/yinzitun7947/article/details/89917611" target="_blank" rel="noopener">https://blog.csdn.net/yinzitun7947/article/details/89917611</a></p>
+
       
     </div>
     
@@ -321,8 +330,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/11/05/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
+              <a href="/2019/11/22/%E5%8E%BB%E9%99%A4view%E4%B8%8A%E9%9D%A2%E7%9A%84runnable/" rel="next" title="去除view上面的runnable">
+                <i class="fa fa-chevron-left"></i> 去除view上面的runnable
               </a>
             
           </div>
@@ -331,8 +340,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/11/22/%E4%BF%AE%E6%94%B9springboot%E9%A1%B9%E7%9B%AE%E4%B8%AD%E7%9A%84tomcat%E7%89%88%E6%9C%AC%E5%8F%B7/" rel="prev" title="修改springboot项目中的tomcat版本号">
-                修改springboot项目中的tomcat版本号 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/11/22/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E9%85%8D%E7%BD%AE/" rel="prev" title="微信小程序配置">
+                微信小程序配置 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -385,8 +394,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -428,6 +446,28 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-6"><a class="nav-link" href="#null"><span class="nav-number">1.</span> <span class="nav-text">解决方法
+1234567报错原因：生成转储文件的数据库版本为8.0,要导入sql文件的数据库版本为5.6,因为是高版本导入到低版本，引起1273错误解决方法：打开sql文件，将文件中的所有utf8mb4_0900_ai_ci替换为utf8_general_ciutf8mb4替换为utf8
+vim 替换方法
+123%s/utf8mb4_0900_ai_ci/utf8_general_ci/gs代表全文  后接原文 再接目标文字 g表示替换
+
+https://blog.csdn.net/yinzitun7947/article/details/89917611
+</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

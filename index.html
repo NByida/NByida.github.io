@@ -228,7 +228,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/22/vim%E6%9B%BF%E6%8D%A2%E5%91%BD%E4%BB%A4/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/22/%E6%A0%91%E8%8E%93%E6%B4%BE%EF%BC%8Cmotion%EF%BC%8Cngrok/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="John Doe">
@@ -247,7 +247,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/11/22/vim%E6%9B%BF%E6%8D%A2%E5%91%BD%E4%BB%A4/" itemprop="url">vim替换命令</a></h1>
+                <a class="post-title-link" href="/2019/11/22/%E6%A0%91%E8%8E%93%E6%B4%BE%EF%BC%8Cmotion%EF%BC%8Cngrok/" itemprop="url">树莓派，motion，ngrok</a></h1>
         
 
         <div class="post-meta">
@@ -259,7 +259,7 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-11-22T19:02:28+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-11-22T19:08:12+08:00">
                 2019-11-22
               </time>
             
@@ -299,7 +299,19 @@
       
         
           
-            <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">:%s/from/to/g</span><br></pre></td></tr></table></figure>
+            <p>树莓派摄像头<br>安装motion  </p>
+<p>在树莓派配置页面开启摄像头</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">raspi-config</span><br><span class="line">vcgencmd get_camera</span><br></pre></td></tr></table></figure>
+<p>在终端输入motion启动</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.cnblogs.com/Rollerman/p/9514900.html</span><br></pre></td></tr></table></figure>
+
+<p>设置树莓派固定ip</p>
+<p><a href="https://www.jianshu.com/p/308fb22a7dab" target="_blank" rel="noopener">https://www.jianshu.com/p/308fb22a7dab</a></p>
+<p>（<a href="http://192.168.31.121:8081/）" target="_blank" rel="noopener">http://192.168.31.121:8081/）</a></p>
+<p>树莓派多端口</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd /root</span><br><span class="line">cd .ngrok2</span><br><span class="line">vim ngrok.yml</span><br></pre></td></tr></table></figure>
+
+
           
         
       
@@ -347,7 +359,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/05/hello-world/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/22/Linux%E6%9F%A5%E7%9C%8B%E7%AB%AF%E5%8F%A3%E5%8D%A0%E7%94%A8/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="John Doe">
@@ -366,7 +378,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/11/05/hello-world/" itemprop="url">Hello World</a></h1>
+                <a class="post-title-link" href="/2019/11/22/Linux%E6%9F%A5%E7%9C%8B%E7%AB%AF%E5%8F%A3%E5%8D%A0%E7%94%A8/" itemprop="url">Linux查看端口占用</a></h1>
         
 
         <div class="post-meta">
@@ -378,8 +390,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-11-05T18:10:42+08:00">
-                2019-11-05
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-11-22T19:08:01+08:00">
+                2019-11-22
               </time>
             
 
@@ -418,19 +430,1148 @@
       
         
           
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+            <ul>
+<li>查看端口占用<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netstat -tnlp | grep :80</span><br></pre></td></tr></table></figure></li>
+<li>杀死进程<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kill -9 pid</span><br></pre></td></tr></table></figure></li>
+</ul>
 
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+    
+    
+    
 
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+    
 
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+    
 
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/22/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E9%85%8D%E7%BD%AE/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/11/22/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E9%85%8D%E7%BD%AE/" itemprop="url">微信小程序配置</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-11-22T19:07:40+08:00">
+                2019-11-22
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <ul>
+<li>appid<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wxfbe8fbc4509ef5a0</span><br></pre></td></tr></table></figure></li>
+<li>appsecert<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">0c5f8ba805c77cfa6e4cf12d93a5047b</span><br></pre></td></tr></table></figure></li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/22/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%95%B0%E6%8D%AE%E5%AF%BC%E5%87%BA/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/11/22/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%95%B0%E6%8D%AE%E5%AF%BC%E5%87%BA/" itemprop="url">数据库数据导出</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-11-22T19:07:40+08:00">
+                2019-11-22
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>从windows生成sql文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mysql -u root -p</span><br><span class="line">use database</span><br><span class="line">source backup.sql</span><br></pre></td></tr></table></figure>
+<p>过程中一直报错，说表不存在，后面发现是两个数据库版本不一致<br>导致建表语句不一样</p>
+<h6>解决方法
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">报错原因：</span><br><span class="line">生成转储文件的数据库版本为8.0,要导入sql文件的数据库版本为5.6,因为是高版本导入到低版本，引起1273错误</span><br><span class="line"></span><br><span class="line">解决方法：</span><br><span class="line">打开sql文件，将文件中的所有</span><br><span class="line">utf8mb4_0900_ai_ci替换为utf8_general_ci</span><br><span class="line">utf8mb4替换为utf8</span><br></pre></td></tr></table></figure>
+vim 替换方法
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">%s/utf8mb4_0900_ai_ci/utf8_general_ci/g</span><br><span class="line"></span><br><span class="line">s代表全文  后接原文 再接目标文字 g表示替换</span><br></pre></td></tr></table></figure>
+
+<p><a href="https://blog.csdn.net/yinzitun7947/article/details/89917611" target="_blank" rel="noopener">https://blog.csdn.net/yinzitun7947/article/details/89917611</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/22/%E5%8E%BB%E9%99%A4view%E4%B8%8A%E9%9D%A2%E7%9A%84runnable/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/11/22/%E5%8E%BB%E9%99%A4view%E4%B8%8A%E9%9D%A2%E7%9A%84runnable/" itemprop="url">去除view上面的runnable</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-11-22T19:07:40+08:00">
+                2019-11-22
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <pre><code>layFullBar.getHandler().removeCallbacks(dismissButtomBarShown);</code></pre>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/22/%E7%A6%81%E6%AD%A2%E6%BB%91%E5%8A%A8ViewPager/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/11/22/%E7%A6%81%E6%AD%A2%E6%BB%91%E5%8A%A8ViewPager/" itemprop="url">禁止滑动ViewPager</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-11-22T19:07:40+08:00">
+                2019-11-22
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p> */<br>public class CanDragViewpager extends ViewPager {</p>
+<pre><code>private boolean isCanScroll = true;
+private boolean isToLogin = false;
+
+private float xT = 0f;
+private float yT = 0f;
+private CommonCallBack commonCallBack;
+
+
+private float initialXValue;
+private float initialYValue;
+
+private SwipeDirection direction;
+private static final int LEFT_TO_RIGHT=1;//方向=从左到右
+private static final int RIGHT_TO_LEFT=2;//方向=从右到左
+public CanDragViewpager(Context context) {
+    super(context);
+}
+
+public CanDragViewpager(Context context, AttributeSet attrs) {
+    super(context, attrs);
+    this.direction = SwipeDirection.all;
+}
+
+public void setScanScroll(boolean isCanScroll) {
+    this.isCanScroll = isCanScroll;
+}
+
+
+public void setToLogin(boolean toLogin) {
+    isToLogin = toLogin;
+}
+
+
+private boolean isY;
+public void setCommonCallBack(CommonCallBack commonCallBack) {
+    this.commonCallBack = commonCallBack;
+}
+
+
+
+int position=1;
+public void setPosition(int position){
+    this.position=position;
+    switch (position){
+        case 0:
+            direction=SwipeDirection.all;
+            break;
+        case 1:
+            if(isCanScroll){
+                direction=SwipeDirection.all;
+            }else {
+                direction=SwipeDirection.right;
+            }
+            break;
+        case 2:
+            direction=SwipeDirection.all;
+            break;
+    }
+}
+
+@Override
+public boolean onTouchEvent(MotionEvent event) {
+    if (this.IsSwipeAllowed(event)) {
+        return super.onTouchEvent(event);
+    }
+    return false;
+}
+
+@Override
+public boolean onInterceptTouchEvent(MotionEvent event) {
+    if (this.IsSwipeAllowed(event)) {
+        return super.onInterceptTouchEvent(event);
+    }
+    return false;
+}
+
+private boolean IsSwipeAllowed(MotionEvent event) {
+    if(this.direction == SwipeDirection.all) return true;
+
+    if(direction == SwipeDirection.none )//disable any swipe
+        return false;
+
+    if(event.getAction()==MotionEvent.ACTION_DOWN) {
+        initialXValue = event.getX();
+        initialYValue = event.getX();
+        return true;
+    }
+
+    if(event.getAction()==MotionEvent.ACTION_MOVE) {
+        try {
+            float diffX = event.getX() - initialXValue;
+            float diffY = event.getY() - initialYValue;
+            if (diffX &gt; 0 &amp;&amp; direction == SwipeDirection.right ) {
+                // swipe from left to right detected
+                if(initialXValue&gt;Math.abs(initialYValue)){
+                    commonCallBack.obtain(null);
+                }
+                return false;
+            }else if (diffX &lt; 0 &amp;&amp; direction == SwipeDirection.left ) {
+                // swipe from right to left detected
+                return false;
+            }
+        } catch (Exception exception) {
+            exception.printStackTrace();
+        }
+    }
+
+    return true;
+}
+public void setAllowedSwipeDirection(SwipeDirection direction) {
+    this.direction = direction;
+}
+
+public static enum SwipeDirection {
+    all, left, right, none ;
+}</code></pre><p>}</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/22/%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%AE%BE%E7%BD%AEswap%E5%86%85%E5%AD%98/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/11/22/%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%AE%BE%E7%BD%AEswap%E5%86%85%E5%AD%98/" itemprop="url">服务器设置swap内存</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-11-22T19:07:40+08:00">
+                2019-11-22
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>搞了台google的一年免费虚拟服务器，<br>装上mysql jdk后跑了个springboot项目，结果直接报内存不足</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Native memory allocation (mmap) failed to map 838860800 bytes for committing reserved memory</span><br></pre></td></tr></table></figure>
+<p>免费的果然不行，内存只有600*1024 Byte<br>只能设置swap分区来虚拟内存了（和树莓派一样）<br>使用 free命令可以看到内存占用情况</p>
+<ul>
+<li><p>添加swap文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mkdir swap</span><br><span class="line">cd swap</span><br><span class="line">sudo dd if=/dev/zero of=sfile bs=1024 count=1000000</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>转化为swap文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkswap sfile</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>激活swap文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo swapon sfile</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/22/%E7%9F%AD%E8%A7%86%E9%A2%91sdk%E8%B0%83%E7%A0%94/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/11/22/%E7%9F%AD%E8%A7%86%E9%A2%91sdk%E8%B0%83%E7%A0%94/" itemprop="url">短视频sdk调研</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-11-22T19:07:40+08:00">
+                2019-11-22
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>飞幕作为一款短视频APP，播放器的选用是一个痛点，在实践中，我们不得不面对众多功能和性能方面的考量，通过不断思考，迭代，重构，去优化用户的播放体验，提升用户的影视生活质量。</p>
+<h6 id="本文内容分为3大部分："><a href="#本文内容分为3大部分：" class="headerlink" title="本文内容分为3大部分："></a>本文内容分为3大部分：</h6><ol>
+<li>视频功能开发我们遇到了哪些些痛点</li>
+<li>我们是怎么解决这些痛点的</li>
+<li>我们下一步的计划是什么</li>
+</ol>
+<h2 id="痛点"><a href="#痛点" class="headerlink" title="痛点"></a>痛点</h2><ul>
+<li>背景 我们平台和其他平台（下厨房，懒饭）相比，视频编码格式不同，清晰度各不相同，所以对播放器的兼容度要求很高。</li>
+<li>我们讲做视频优化，到底是要优化什么，这就要看我们遇到了哪些问题，有哪些痛点需要解决。整体看来，视频的优化从下面几个方面切入：带宽、播放错误、缓存、流畅性等。这些指标有很大程度是由播放器性能决定的，因此，我们调研了四款播放器。<h4 id="MediaPlayer"><a href="#MediaPlayer" class="headerlink" title="MediaPlayer"></a>MediaPlayer</h4>原生播放器的兼容性比较差，由于Android的碎片化、不同厂商的ROM定制、芯片的差异等原因，播放失败、花屏、黑屏等问题层出不穷，并且当问题出现的时候，我们通常束手无策。另外，播放出错的时候，播放器提供的错误信息也不够明确，很多时候很难清楚的知道到底是因为什么原因导致的播放错误。因此，无论从播放问题的排查还是处理上，原生播放器都有其局限性。<h4 id="ExoPlayer"><a href="#ExoPlayer" class="headerlink" title="ExoPlayer"></a>ExoPlayer</h4><ul>
+<li>ExoPlayer是谷歌推出的一款开源的播放器，可以说是谷歌的亲儿子。</li>
+<li>优点：Bug较少，基本无花屏，画面拉伸现象，解码性能强大，播放高清视频播放无压力</li>
+<li>缺点：由于谷歌的版权原因，ExoPlayer无法解码MPEG-4编码格式的视频（有画面，无声音的黑屏bug）<h4 id="IJKPlayer"><a href="#IJKPlayer" class="headerlink" title="IJKPlayer"></a>IJKPlayer</h4></li>
+</ul>
+</li>
+<li>ijk BILIBILI开源的播放器,基于FFMPEG.Star-9000多与fork-3000的视频播放器</li>
+<li>优点：兼容性比较好，能成功播放Exoplayer不支持的MPEG-4格式的视频，普通清晰度的视频播放流畅。</li>
+<li>缺点：解码器的性能比较弱，高清视频（1080p及以上）播放卡顿频繁，体验很差。Gitbug上的项目已经无人维护了，有新的问题只能自行解决。</li>
+</ul>
+<h4 id="七牛播放器"><a href="#七牛播放器" class="headerlink" title="七牛播放器"></a>七牛播放器</h4><ul>
+<li>七牛云播放器 SDK 具有包体小、首开快，适用于点播场景。</li>
+<li>有三种视频渲染模式（PLMediaPlayer，PLVideoView，PLVideoTextureView）其中第一种是单纯的播放器内核，播放状态的控制，缓冲的开启关闭，画面的渲染，资源的开启和释放需要手动实现。后两种模式相比第一种来说，更易于集成，但有些操作无法修改（如裁剪画面视频的黑边）</li>
+<li>优点：首开比较快，兼容性好，性能高，有七牛做技术背书，有问题能得到及时解决</li>
+<li>缺点：遇到一些小问题，已经解决了，能平稳播放。<h4 id=""><a href="#" class="headerlink" title=""></a></h4><h3 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h3></li>
+</ul>
+<p>开始立项时，我们调研了前三种播放器，并将三种播放器集成到了项目里面，抽象出一个管理类，支持项目在这三个播放器内核之间切换。最开始时，我们选用的是EXOPlayer，后来发现好生菜发的视频只有声音，没有画面，知道这是EXOplayer不能规避的硬伤，因此把内核切成了ijk，但由于ijk播放高清视频，H.265编码的视频时卡顿明显，我们开始寻求其他播放器的解决方案，最终发现七牛播放器比较符合我司的视频点播业务，因此就选择了集成代价最小，代码侵入最低的PLVideoTextureView进行集成。</p>
+<h4 id="视频优化计划"><a href="#视频优化计划" class="headerlink" title="视频优化计划"></a>视频优化计划</h4><p>进过几个播放器的评估对比，发现了不同播放器的优势和不足，并充分暴露了问题所在，如黑屏，卡顿，倍速bug，画面拉伸，形成了一套解决方案，但是还是有待优化。</p>
+<ul>
+<li>视频黑边问题，我们准备从PLVideoTextureView切换成PLMediaPlayer，后者播放流程更为可控，可以直接去除黑边。</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/22/%E5%AE%89%E5%8D%93%E6%A8%A1%E6%9D%BF%E7%94%9F%E6%88%90mvp/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/11/22/%E5%AE%89%E5%8D%93%E6%A8%A1%E6%9D%BF%E7%94%9F%E6%88%90mvp/" itemprop="url">安卓模板生成mvp</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-11-22T19:07:40+08:00">
+                2019-11-22
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>模板路径</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd C:\Program Files\Android\Android Studio\plugins\android\lib\templates\activities\BaseRvFrgment</span><br></pre></td></tr></table></figure>
+<p>查看文件夹</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tree /F</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">C:.</span><br><span class="line">│  globals.xml.ftl</span><br><span class="line">│  recipe.xml.ftl</span><br><span class="line">│  recipe_fragment.xml.ftl</span><br><span class="line">│  recipe_simple.xml.ftl</span><br><span class="line">│  template.xml</span><br><span class="line">│  template_basic_activity_fragment.png</span><br><span class="line">│  template_basic_present_activity.png</span><br><span class="line">│</span><br><span class="line">└─root</span><br><span class="line">    ├─res</span><br><span class="line">    │  └─layout</span><br><span class="line">    │          activity_fragment_container.xml.ftl</span><br><span class="line">    │          fragment_simple.xml.ftl</span><br><span class="line">    │          recipe_base_simple.xml.ftl</span><br><span class="line">    │</span><br><span class="line">    └─src</span><br><span class="line">        └─app_package</span><br><span class="line">                SimpleActivity.java.ftl</span><br><span class="line">                SimpleActivity.kt.ftl</span><br><span class="line">                SimpleActivityFragment.java.ftl</span><br><span class="line">                SimpleActivityFragment.kt.ftl</span><br><span class="line">                SimpleMvpView.java.ftl</span><br></pre></td></tr></table></figure>
+<p>template.xml 是给变量赋值的窗口的xml<br>recipe_fragment.xml.ftl是生成java文件关键，内容如下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&lt;recipe&gt;</span><br><span class="line">    &lt;#include &quot;../common/recipe_simple_menu.xml.ftl&quot; /&gt;</span><br><span class="line"></span><br><span class="line">    &lt;dependency mavenUrl=&quot;com.android.support.constraint:constraint-layout:+&quot; /&gt;</span><br><span class="line"></span><br><span class="line">    &lt;instantiate from=&quot;root/res/layout/activity_fragment_container.xml.ftl&quot;</span><br><span class="line">                   to=&quot;$&#123;escapeXmlAttribute(resOut)&#125;/layout/$&#123;simpleLayoutName&#125;.xml&quot; /&gt;</span><br><span class="line"></span><br><span class="line">//生成xml布局文件</span><br><span class="line">    &lt;instantiate from=&quot;root/res/layout/fragment_simple.xml.ftl&quot;</span><br><span class="line">                   to=&quot;$&#123;escapeXmlAttribute(resOut)&#125;/layout/$&#123;fragmentLayoutName&#125;.xml&quot; /&gt;</span><br><span class="line">//生成java类</span><br><span class="line">    &lt;instantiate from=&quot;root/src/app_package/SimpleActivityFragment.$&#123;ktOrJavaExt&#125;.ftl&quot;</span><br><span class="line">                   to=&quot;$&#123;escapeXmlAttribute(srcOut)&#125;/$&#123;fragmentClass&#125;.$&#123;ktOrJavaExt&#125;&quot; /&gt;</span><br><span class="line">&lt;/recipe&gt;</span><br></pre></td></tr></table></figure>
+<p>看看SimpleActivityFragment.java.ftl是怎么生成java文件的</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">package $&#123;packageName&#125;/../fragment;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;#if applicationPackage??&gt;</span><br><span class="line">import $&#123;applicationPackage&#125;.R;</span><br><span class="line">import $&#123;applicationPackage&#125;.presenter.base.BasePresentFragment;</span><br><span class="line">import $&#123;applicationPackage&#125;.view.$&#123;MvpViewClass&#125;;</span><br><span class="line">&lt;/#if&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">public class $&#123;activityClass&#125; extends BasePresentFragment&lt;$&#123;MvpViewClass&#125;&gt; &#123;</span><br><span class="line"></span><br><span class="line">    </span><br><span class="line">     @Override</span><br><span class="line">    public Class&lt;$&#123;MvpViewClass&#125;&gt; getPresentClass() &#123;</span><br><span class="line">        return $&#123;MvpViewClass&#125;.class;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public void onNetWorkErorRetry() &#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/22/recyclewView%20item%20%E6%8A%A2%E5%8D%A0%E7%84%A6%E7%82%B9%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/11/22/recyclewView%20item%20%E6%8A%A2%E5%8D%A0%E7%84%A6%E7%82%B9%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/" itemprop="url">recyclewView item 抢占焦点解决办法</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-11-22T19:07:40+08:00">
+                2019-11-22
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>在父布局加上以下属性</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">android:descendantFocusability=&quot;blocksDescendants&quot;</span><br><span class="line"></span><br><span class="line">//beforeDescendants：viewgroup会优先其子类控件而获取到焦点</span><br><span class="line"></span><br><span class="line">//afterDescendants：viewgroup只有当其子类控件不需要获取焦点时才获取焦点</span><br><span class="line"></span><br><span class="line">//blocksDescendants：viewgroup会覆盖子类控件而直接获得焦点</span><br></pre></td></tr></table></figure>
 
           
         
@@ -469,6 +1610,10 @@
   </section>
 
   
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">&lt;i class=&quot;fa fa-angle-right&quot;&gt;&lt;&#x2F;i&gt;</a>
+  </nav>
+
 
 
           </div>
@@ -512,7 +1657,7 @@
               
                 <a href="/archives/%20%7C%7C%20archive">
               
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">21</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>

@@ -79,14 +79,14 @@
 
 
 
-<meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="description" content="飞幕作为一款短视频APP，播放器的选用是一个痛点，在实践中，我们不得不面对众多功能和性能方面的考量，通过不断思考，迭代，重构，去优化用户的播放体验，提升用户的影视生活质量。 本文内容分为3大部分： 视频功能开发我们遇到了哪些些痛点 我们是怎么解决这些痛点的 我们下一步的计划是什么  痛点 背景 我们平台和其他平台（下厨房，懒饭）相比，视频编码格式不同，清晰度各不相同，所以对播放器的兼容度要求很高。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;05&#x2F;hello-world&#x2F;index.html">
+<meta property="og:title" content="短视频sdk调研">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;22&#x2F;%E7%9F%AD%E8%A7%86%E9%A2%91sdk%E8%B0%83%E7%A0%94&#x2F;index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="飞幕作为一款短视频APP，播放器的选用是一个痛点，在实践中，我们不得不面对众多功能和性能方面的考量，通过不断思考，迭代，重构，去优化用户的播放体验，提升用户的影视生活质量。 本文内容分为3大部分： 视频功能开发我们遇到了哪些些痛点 我们是怎么解决这些痛点的 我们下一步的计划是什么  痛点 背景 我们平台和其他平台（下厨房，懒饭）相比，视频编码格式不同，清晰度各不相同，所以对播放器的兼容度要求很高。">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-11-05T10:10:42.095Z">
+<meta property="og:updated_time" content="2019-07-05T08:24:14.819Z">
 <meta name="twitter:card" content="summary">
 
 
@@ -117,13 +117,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/11/05/hello-world/"/>
+  <link rel="canonical" href="http://yoursite.com/2019/11/22/短视频sdk调研/"/>
 
 
 
 
 
-  <title>Hello World | Hexo</title>
+  <title>短视频sdk调研 | Hexo</title>
   
 
 
@@ -230,7 +230,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/05/hello-world/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/22/%E7%9F%AD%E8%A7%86%E9%A2%91sdk%E8%B0%83%E7%A0%94/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="John Doe">
@@ -247,7 +247,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Hello World</h1>
+          <h1 class="post-title" itemprop="name headline">短视频sdk调研</h1>
         
 
         <div class="post-meta">
@@ -259,8 +259,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-11-05T18:10:42+08:00">
-                2019-11-05
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-11-22T19:07:40+08:00">
+                2019-11-22
               </time>
             
 
@@ -297,19 +297,35 @@
       
 
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+        <p>飞幕作为一款短视频APP，播放器的选用是一个痛点，在实践中，我们不得不面对众多功能和性能方面的考量，通过不断思考，迭代，重构，去优化用户的播放体验，提升用户的影视生活质量。</p>
+<h6 id="本文内容分为3大部分："><a href="#本文内容分为3大部分：" class="headerlink" title="本文内容分为3大部分："></a>本文内容分为3大部分：</h6><ol>
+<li>视频功能开发我们遇到了哪些些痛点</li>
+<li>我们是怎么解决这些痛点的</li>
+<li>我们下一步的计划是什么</li>
+</ol>
+<h2 id="痛点"><a href="#痛点" class="headerlink" title="痛点"></a>痛点</h2><ul>
+<li>背景 我们平台和其他平台（下厨房，懒饭）相比，视频编码格式不同，清晰度各不相同，所以对播放器的兼容度要求很高。</li>
+<li>我们讲做视频优化，到底是要优化什么，这就要看我们遇到了哪些问题，有哪些痛点需要解决。整体看来，视频的优化从下面几个方面切入：带宽、播放错误、缓存、流畅性等。这些指标有很大程度是由播放器性能决定的，因此，我们调研了四款播放器。<h4 id="MediaPlayer"><a href="#MediaPlayer" class="headerlink" title="MediaPlayer"></a>MediaPlayer</h4>原生播放器的兼容性比较差，由于Android的碎片化、不同厂商的ROM定制、芯片的差异等原因，播放失败、花屏、黑屏等问题层出不穷，并且当问题出现的时候，我们通常束手无策。另外，播放出错的时候，播放器提供的错误信息也不够明确，很多时候很难清楚的知道到底是因为什么原因导致的播放错误。因此，无论从播放问题的排查还是处理上，原生播放器都有其局限性。<h4 id="ExoPlayer"><a href="#ExoPlayer" class="headerlink" title="ExoPlayer"></a>ExoPlayer</h4><ul>
+<li>ExoPlayer是谷歌推出的一款开源的播放器，可以说是谷歌的亲儿子。</li>
+<li>优点：Bug较少，基本无花屏，画面拉伸现象，解码性能强大，播放高清视频播放无压力</li>
+<li>缺点：由于谷歌的版权原因，ExoPlayer无法解码MPEG-4编码格式的视频（有画面，无声音的黑屏bug）<h4 id="IJKPlayer"><a href="#IJKPlayer" class="headerlink" title="IJKPlayer"></a>IJKPlayer</h4></li>
+</ul>
+</li>
+<li>ijk BILIBILI开源的播放器,基于FFMPEG.Star-9000多与fork-3000的视频播放器</li>
+<li>优点：兼容性比较好，能成功播放Exoplayer不支持的MPEG-4格式的视频，普通清晰度的视频播放流畅。</li>
+<li>缺点：解码器的性能比较弱，高清视频（1080p及以上）播放卡顿频繁，体验很差。Gitbug上的项目已经无人维护了，有新的问题只能自行解决。</li>
+</ul>
+<h4 id="七牛播放器"><a href="#七牛播放器" class="headerlink" title="七牛播放器"></a>七牛播放器</h4><ul>
+<li>七牛云播放器 SDK 具有包体小、首开快，适用于点播场景。</li>
+<li>有三种视频渲染模式（PLMediaPlayer，PLVideoView，PLVideoTextureView）其中第一种是单纯的播放器内核，播放状态的控制，缓冲的开启关闭，画面的渲染，资源的开启和释放需要手动实现。后两种模式相比第一种来说，更易于集成，但有些操作无法修改（如裁剪画面视频的黑边）</li>
+<li>优点：首开比较快，兼容性好，性能高，有七牛做技术背书，有问题能得到及时解决</li>
+<li>缺点：遇到一些小问题，已经解决了，能平稳播放。<h4 id=""><a href="#" class="headerlink" title=""></a></h4><h3 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h3></li>
+</ul>
+<p>开始立项时，我们调研了前三种播放器，并将三种播放器集成到了项目里面，抽象出一个管理类，支持项目在这三个播放器内核之间切换。最开始时，我们选用的是EXOPlayer，后来发现好生菜发的视频只有声音，没有画面，知道这是EXOplayer不能规避的硬伤，因此把内核切成了ijk，但由于ijk播放高清视频，H.265编码的视频时卡顿明显，我们开始寻求其他播放器的解决方案，最终发现七牛播放器比较符合我司的视频点播业务，因此就选择了集成代价最小，代码侵入最低的PLVideoTextureView进行集成。</p>
+<h4 id="视频优化计划"><a href="#视频优化计划" class="headerlink" title="视频优化计划"></a>视频优化计划</h4><p>进过几个播放器的评估对比，发现了不同播放器的优势和不足，并充分暴露了问题所在，如黑屏，卡顿，倍速bug，画面拉伸，形成了一套解决方案，但是还是有待优化。</p>
+<ul>
+<li>视频黑边问题，我们准备从PLVideoTextureView切换成PLMediaPlayer，后者播放流程更为可控，可以直接去除黑边。</li>
+</ul>
 
       
     </div>
@@ -334,14 +350,18 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2019/11/22/%E5%AE%89%E5%8D%93%E6%A8%A1%E6%9D%BF%E7%94%9F%E6%88%90mvp/" rel="next" title="安卓模板生成mvp">
+                <i class="fa fa-chevron-left"></i> 安卓模板生成mvp
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/11/22/vim%E6%9B%BF%E6%8D%A2%E5%91%BD%E4%BB%A4/" rel="prev" title="vim替换命令">
-                vim替换命令 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/11/22/%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%AE%BE%E7%BD%AEswap%E5%86%85%E5%AD%98/" rel="prev" title="服务器设置swap内存">
+                服务器设置swap内存 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -456,7 +476,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-6"><a class="nav-link" href="#本文内容分为3大部分："><span class="nav-number">1.</span> <span class="nav-text">本文内容分为3大部分：</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#痛点"><span class="nav-number"></span> <span class="nav-text">痛点</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#MediaPlayer"><span class="nav-number"></span> <span class="nav-text">MediaPlayer</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ExoPlayer"><span class="nav-number"></span> <span class="nav-text">ExoPlayer</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#IJKPlayer"><span class="nav-number"></span> <span class="nav-text">IJKPlayer</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#七牛播放器"><span class="nav-number"></span> <span class="nav-text">七牛播放器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#null"><span class="nav-number"></span> <span class="nav-text"></span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解决方法"><span class="nav-number"></span> <span class="nav-text">解决方法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#视频优化计划"><span class="nav-number"></span> <span class="nav-text">视频优化计划</span></a></div>
             
 
           </div>

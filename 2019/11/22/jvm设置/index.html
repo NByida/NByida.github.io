@@ -79,14 +79,14 @@
 
 
 
-<meta name="description" content="1:%s&#x2F;from&#x2F;to&#x2F;g">
+<meta name="description" content="设置jvm内存的参数有四个：  -Xmx Java Heap最大值，默认值为物理内存的1&#x2F;4，最佳设值应该视物理内存大小及计算机内其他内存开销而定。-Xms Java Heap初始值，Server端JVM最好将-Xms和-Xmx设为相同值，开发测试机JVM可以保留默认值。-Xmn Java Heap Young区大小，不熟悉最好保留默认值。-Xss 每个线程的Stack大小，不熟悉最好保留默认值">
 <meta property="og:type" content="article">
-<meta property="og:title" content="vim替换命令">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;22&#x2F;vim%E6%9B%BF%E6%8D%A2%E5%91%BD%E4%BB%A4&#x2F;index.html">
+<meta property="og:title" content="jvm设置">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;22&#x2F;jvm%E8%AE%BE%E7%BD%AE&#x2F;index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="1:%s&#x2F;from&#x2F;to&#x2F;g">
+<meta property="og:description" content="设置jvm内存的参数有四个：  -Xmx Java Heap最大值，默认值为物理内存的1&#x2F;4，最佳设值应该视物理内存大小及计算机内其他内存开销而定。-Xms Java Heap初始值，Server端JVM最好将-Xms和-Xmx设为相同值，开发测试机JVM可以保留默认值。-Xmn Java Heap Young区大小，不熟悉最好保留默认值。-Xss 每个线程的Stack大小，不熟悉最好保留默认值">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-11-14T01:55:40.094Z">
+<meta property="og:updated_time" content="2019-10-18T10:00:17.208Z">
 <meta name="twitter:card" content="summary">
 
 
@@ -117,13 +117,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/11/22/vim替换命令/"/>
+  <link rel="canonical" href="http://yoursite.com/2019/11/22/jvm设置/"/>
 
 
 
 
 
-  <title>vim替换命令 | Hexo</title>
+  <title>jvm设置 | Hexo</title>
   
 
 
@@ -230,7 +230,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/22/vim%E6%9B%BF%E6%8D%A2%E5%91%BD%E4%BB%A4/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/22/jvm%E8%AE%BE%E7%BD%AE/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="John Doe">
@@ -247,7 +247,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">vim替换命令</h1>
+          <h1 class="post-title" itemprop="name headline">jvm设置</h1>
         
 
         <div class="post-meta">
@@ -259,7 +259,7 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-11-22T19:02:28+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-11-22T19:07:40+08:00">
                 2019-11-22
               </time>
             
@@ -297,7 +297,12 @@
       
 
       
-        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">:%s/from/to/g</span><br></pre></td></tr></table></figure>
+        <ul>
+<li>设置jvm内存的参数有四个：</li>
+</ul>
+<p>-Xmx Java Heap最大值，默认值为物理内存的1/4，最佳设值应该视物理内存大小及计算机内其他内存开销而定。<br>-Xms Java Heap初始值，Server端JVM最好将-Xms和-Xmx设为相同值，开发测试机JVM可以保留默认值。<br>-Xmn Java Heap Young区大小，不熟悉最好保留默认值。<br>-Xss 每个线程的Stack大小，不熟悉最好保留默认值；</p>
+<p>一般用到最多的是：<br>-Xms512m （堆最大大小） 设置jvm促使内存为512M，此值可以设置与-Xmx相同，以避免每次垃圾回收完成后JVM重新分配内存<br>-Xmx512m （堆默认大小） 设置jvm最大可用内存为512M<br>-Xmn200m （新生代大小） 设置年轻代大小为200M。整个堆大小=年轻代大小+年老代大小+持久代大小。持久代一般固定大小为64m。所以增大年轻代后，将会减小年老代大小。此值对系统性能影响较大，Sun官方推荐配置为整个堆的3/8<br>-Xss128k 设置每个线程的堆栈大小。JDK5.0以后每个线程堆栈大小为1M，以前每个线程堆栈大小为256K。更具应用的线程所需内存大小进行调整。在相同物理内存下，减小这个值能生成更多的线程。但是操作系统对一个进程内的线程数还是有限制的，不能无限生成，经验值在3000~5000左右<br>————————————————<br>版权声明：本文为CSDN博主「时光无声_l」的原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接及本声明。<br>原文链接：<a href="https://blog.csdn.net/liuziteng0228/article/details/85226698" target="_blank" rel="noopener">https://blog.csdn.net/liuziteng0228/article/details/85226698</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nohup java -Xms64m -Xmx128m -jar xxx.xxxx-xxx-xxxxxx-0.0.1-SNAPSHOT.jar</span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -321,8 +326,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/11/05/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
+              <a href="/2019/11/22/git%E8%AE%BE%E7%BD%AEalias/" rel="next" title="git设置alias">
+                <i class="fa fa-chevron-left"></i> git设置alias
               </a>
             
           </div>
@@ -331,8 +336,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/11/22/%E4%BF%AE%E6%94%B9springboot%E9%A1%B9%E7%9B%AE%E4%B8%AD%E7%9A%84tomcat%E7%89%88%E6%9C%AC%E5%8F%B7/" rel="prev" title="修改springboot项目中的tomcat版本号">
-                修改springboot项目中的tomcat版本号 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/11/22/linux%E5%AE%89%E8%A3%85java/" rel="prev" title="linux安装java">
+                linux安装java <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>

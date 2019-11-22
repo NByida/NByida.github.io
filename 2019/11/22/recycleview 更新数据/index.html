@@ -79,14 +79,14 @@
 
 
 
-<meta name="description" content="1:%s&#x2F;from&#x2F;to&#x2F;g">
+<meta name="description" content="recycleview使用notifyItemChanged（p）更新数据闪退了1Java.lang.IllegalArgumentException: Called attach on a child which is not detached   网络回调更新item时，要判断item是否在屏幕上123if(currentPraiseCommentPosition+commentAdapter">
 <meta property="og:type" content="article">
-<meta property="og:title" content="vim替换命令">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;22&#x2F;vim%E6%9B%BF%E6%8D%A2%E5%91%BD%E4%BB%A4&#x2F;index.html">
+<meta property="og:title" content="recycleview 更新数据">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;22&#x2F;recycleview%20%E6%9B%B4%E6%96%B0%E6%95%B0%E6%8D%AE&#x2F;index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="1:%s&#x2F;from&#x2F;to&#x2F;g">
+<meta property="og:description" content="recycleview使用notifyItemChanged（p）更新数据闪退了1Java.lang.IllegalArgumentException: Called attach on a child which is not detached   网络回调更新item时，要判断item是否在屏幕上123if(currentPraiseCommentPosition+commentAdapter">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-11-14T01:55:40.094Z">
+<meta property="og:updated_time" content="2019-10-09T07:48:43.233Z">
 <meta name="twitter:card" content="summary">
 
 
@@ -117,13 +117,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/11/22/vim替换命令/"/>
+  <link rel="canonical" href="http://yoursite.com/2019/11/22/recycleview 更新数据/"/>
 
 
 
 
 
-  <title>vim替换命令 | Hexo</title>
+  <title>recycleview 更新数据 | Hexo</title>
   
 
 
@@ -230,7 +230,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/22/vim%E6%9B%BF%E6%8D%A2%E5%91%BD%E4%BB%A4/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/22/recycleview%20%E6%9B%B4%E6%96%B0%E6%95%B0%E6%8D%AE/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="John Doe">
@@ -247,7 +247,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">vim替换命令</h1>
+          <h1 class="post-title" itemprop="name headline">recycleview 更新数据</h1>
         
 
         <div class="post-meta">
@@ -259,7 +259,7 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-11-22T19:02:28+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-11-22T19:07:40+08:00">
                 2019-11-22
               </time>
             
@@ -297,7 +297,12 @@
       
 
       
-        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">:%s/from/to/g</span><br></pre></td></tr></table></figure>
+        <h1 id="recycleview使用notifyItemChanged（p）更新数据闪退了"><a href="#recycleview使用notifyItemChanged（p）更新数据闪退了" class="headerlink" title="recycleview使用notifyItemChanged（p）更新数据闪退了"></a>recycleview使用notifyItemChanged（p）更新数据闪退了</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Java.lang.IllegalArgumentException: Called attach on a child which is not detached</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>网络回调更新item时，要判断item是否在屏幕上<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">if(currentPraiseCommentPosition+commentAdapter.getHeaderLayoutCount()&lt;=linearLayoutManager.findLastVisibleItemPosition() &amp;&amp; currentPraiseCommentPosition+commentAdapter.getHeaderLayoutCount()&gt;=linearLayoutManager.findFirstVisibleItemPosition())&#123;</span><br><span class="line">          commentAdapter.notifyItemChanged(currentPraiseCommentPosition+commentAdapter.getHeaderLayoutCount(),comments.get(currentPraiseCommentPosition));</span><br><span class="line">      &#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+
       
     </div>
     
@@ -321,8 +326,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/11/05/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
+              <a href="/2019/11/22/PacketTooBigException/" rel="next" title="PacketTooBigException">
+                <i class="fa fa-chevron-left"></i> PacketTooBigException
               </a>
             
           </div>
@@ -331,8 +336,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/11/22/%E4%BF%AE%E6%94%B9springboot%E9%A1%B9%E7%9B%AE%E4%B8%AD%E7%9A%84tomcat%E7%89%88%E6%9C%AC%E5%8F%B7/" rel="prev" title="修改springboot项目中的tomcat版本号">
-                修改springboot项目中的tomcat版本号 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/11/22/recyclewView%20item%20%E6%8A%A2%E5%8D%A0%E7%84%A6%E7%82%B9%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/" rel="prev" title="recyclewView item 抢占焦点解决办法">
+                recyclewView item 抢占焦点解决办法 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -385,8 +390,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -428,6 +442,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#recycleview使用notifyItemChanged（p）更新数据闪退了"><span class="nav-number">1.</span> <span class="nav-text">recycleview使用notifyItemChanged（p）更新数据闪退了</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

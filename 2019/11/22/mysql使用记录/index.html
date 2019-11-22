@@ -79,14 +79,14 @@
 
 
 
-<meta name="description" content="1:%s&#x2F;from&#x2F;to&#x2F;g">
+<meta name="description" content="1.安装mysql  1apt-get install mysql-server  2.修改加密方式，修改密码加密方式，改成mysql_native_password 1ALTER USER &amp;apos;root&amp;apos;@&amp;apos;localhost&amp;apos; IDENTIFIED WITH mysql_native_password BY &amp;apos;root&amp;apos;;  3.lin">
 <meta property="og:type" content="article">
-<meta property="og:title" content="vim替换命令">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;22&#x2F;vim%E6%9B%BF%E6%8D%A2%E5%91%BD%E4%BB%A4&#x2F;index.html">
+<meta property="og:title" content="mysql使用记录">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;22&#x2F;mysql%E4%BD%BF%E7%94%A8%E8%AE%B0%E5%BD%95&#x2F;index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="1:%s&#x2F;from&#x2F;to&#x2F;g">
+<meta property="og:description" content="1.安装mysql  1apt-get install mysql-server  2.修改加密方式，修改密码加密方式，改成mysql_native_password 1ALTER USER &amp;apos;root&amp;apos;@&amp;apos;localhost&amp;apos; IDENTIFIED WITH mysql_native_password BY &amp;apos;root&amp;apos;;  3.lin">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-11-14T01:55:40.094Z">
+<meta property="og:updated_time" content="2019-10-09T03:13:28.994Z">
 <meta name="twitter:card" content="summary">
 
 
@@ -117,13 +117,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/11/22/vim替换命令/"/>
+  <link rel="canonical" href="http://yoursite.com/2019/11/22/mysql使用记录/"/>
 
 
 
 
 
-  <title>vim替换命令 | Hexo</title>
+  <title>mysql使用记录 | Hexo</title>
   
 
 
@@ -230,7 +230,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/22/vim%E6%9B%BF%E6%8D%A2%E5%91%BD%E4%BB%A4/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/22/mysql%E4%BD%BF%E7%94%A8%E8%AE%B0%E5%BD%95/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="John Doe">
@@ -247,7 +247,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">vim替换命令</h1>
+          <h1 class="post-title" itemprop="name headline">mysql使用记录</h1>
         
 
         <div class="post-meta">
@@ -259,7 +259,7 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-11-22T19:02:28+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-11-22T19:07:40+08:00">
                 2019-11-22
               </time>
             
@@ -297,7 +297,22 @@
       
 
       
-        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">:%s/from/to/g</span><br></pre></td></tr></table></figure>
+        <h6>1.安装mysql
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt-get install mysql-server</span><br></pre></td></tr></table></figure>
+
+<h6>2.修改加密方式，修改密码加密方式，改成mysql_native_password
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ALTER USER &apos;root&apos;@&apos;localhost&apos; IDENTIFIED WITH mysql_native_password BY &apos;root&apos;;</span><br></pre></td></tr></table></figure>
+
+<p>3.linux下数据库无法远程访问</p>
+<ul>
+<li><h6>添加服务器入站规则，开放3306端口
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"> cd /etc/mysql/mariadb.conf.d</span><br><span class="line"> vim 50-server.cnf</span><br><span class="line">//修改bindaddress (127.0.0.1-&gt;) 0.0.0.0</span><br></pre></td></tr></table></figure></li>
+<li>修改mysql中user表的 user=root的host字段为%</li>
+</ul>
+<p>4.重启mysql</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service mysqld restart</span><br></pre></td></tr></table></figure>
+
       
     </div>
     
@@ -321,8 +336,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/11/05/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
+              <a href="/2019/11/22/linux%E5%AE%89%E8%A3%85java/" rel="next" title="linux安装java">
+                <i class="fa fa-chevron-left"></i> linux安装java
               </a>
             
           </div>
@@ -331,8 +346,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/11/22/%E4%BF%AE%E6%94%B9springboot%E9%A1%B9%E7%9B%AE%E4%B8%AD%E7%9A%84tomcat%E7%89%88%E6%9C%AC%E5%8F%B7/" rel="prev" title="修改springboot项目中的tomcat版本号">
-                修改springboot项目中的tomcat版本号 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/11/22/PacketTooBigException/" rel="prev" title="PacketTooBigException">
+                PacketTooBigException <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -385,8 +400,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -428,6 +452,49 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-6"><a class="nav-link" href="#null"><span class="nav-number">1.</span> <span class="nav-text">1.安装mysql
+
+1apt-get install mysql-server
+
+2.修改加密方式，修改密码加密方式，改成mysql_native_password
+1ALTER USER &#39;root&#39;@&#39;localhost&#39; IDENTIFIED WITH mysql_native_password BY &#39;root&#39;;
+
+3.linux下数据库无法远程访问
+
+添加服务器入站规则，开放3306端口
+123 cd /etc/mysql/mariadb.conf.d vim 50-server.cnf//修改bindaddress (127.0.0.1-&gt;) 0.0.0.0
+修改mysql中user表的 user=root的host字段为%
+
+4.重启mysql
+1service mysqld restart
+</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#null"><span class="nav-number">2.</span> <span class="nav-text">2.修改加密方式，修改密码加密方式，改成mysql_native_password
+1ALTER USER &#39;root&#39;@&#39;localhost&#39; IDENTIFIED WITH mysql_native_password BY &#39;root&#39;;
+
+3.linux下数据库无法远程访问
+
+添加服务器入站规则，开放3306端口
+123 cd /etc/mysql/mariadb.conf.d vim 50-server.cnf//修改bindaddress (127.0.0.1-&gt;) 0.0.0.0
+修改mysql中user表的 user=root的host字段为%
+
+4.重启mysql
+1service mysqld restart
+</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#null"><span class="nav-number">3.</span> <span class="nav-text">添加服务器入站规则，开放3306端口
+123 cd /etc/mysql/mariadb.conf.d vim 50-server.cnf//修改bindaddress (127.0.0.1-&gt;) 0.0.0.0</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

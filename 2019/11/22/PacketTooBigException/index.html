@@ -79,14 +79,14 @@
 
 
 
-<meta name="description" content="1:%s&#x2F;from&#x2F;to&#x2F;g">
+<meta name="description" content="mysql 数据包太小会引发错误信息  背景：在做一个数据分页的功能，使用的是假分页：sql一次查询出所有 的数据，放在内存中，使用PageHelper（com.github.pagehelper）根据前端的页面分页返回数据。从而实现了功能。服务上线两天后，发现分页接口500了，日志如下1Error querying database.  Cause: com.mysql.cj.jdbc.exce">
 <meta property="og:type" content="article">
-<meta property="og:title" content="vim替换命令">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;22&#x2F;vim%E6%9B%BF%E6%8D%A2%E5%91%BD%E4%BB%A4&#x2F;index.html">
+<meta property="og:title" content="PacketTooBigException">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;22&#x2F;PacketTooBigException&#x2F;index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="1:%s&#x2F;from&#x2F;to&#x2F;g">
+<meta property="og:description" content="mysql 数据包太小会引发错误信息  背景：在做一个数据分页的功能，使用的是假分页：sql一次查询出所有 的数据，放在内存中，使用PageHelper（com.github.pagehelper）根据前端的页面分页返回数据。从而实现了功能。服务上线两天后，发现分页接口500了，日志如下1Error querying database.  Cause: com.mysql.cj.jdbc.exce">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-11-14T01:55:40.094Z">
+<meta property="og:updated_time" content="2019-10-16T07:04:16.352Z">
 <meta name="twitter:card" content="summary">
 
 
@@ -117,13 +117,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/11/22/vim替换命令/"/>
+  <link rel="canonical" href="http://yoursite.com/2019/11/22/PacketTooBigException/"/>
 
 
 
 
 
-  <title>vim替换命令 | Hexo</title>
+  <title>PacketTooBigException | Hexo</title>
   
 
 
@@ -230,7 +230,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/22/vim%E6%9B%BF%E6%8D%A2%E5%91%BD%E4%BB%A4/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/22/PacketTooBigException/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="John Doe">
@@ -247,7 +247,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">vim替换命令</h1>
+          <h1 class="post-title" itemprop="name headline">PacketTooBigException</h1>
         
 
         <div class="post-meta">
@@ -259,7 +259,7 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-11-22T19:02:28+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-11-22T19:07:40+08:00">
                 2019-11-22
               </time>
             
@@ -297,7 +297,31 @@
       
 
       
-        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">:%s/from/to/g</span><br></pre></td></tr></table></figure>
+        <h1 id="mysql-数据包太小会引发错误信息"><a href="#mysql-数据包太小会引发错误信息" class="headerlink" title="mysql 数据包太小会引发错误信息"></a>mysql 数据包太小会引发错误信息</h1><hr>
+<ul>
+<li>背景：在做一个数据分页的功能，使用的是假分页：sql一次查询出所有 的数据，放在内存中，使用PageHelper（com.github.pagehelper）根据前端的页面分页返回数据。从而实现了功能。<br>服务上线两天后，发现分页接口500了，日志如下<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Error querying database.  Cause: com.mysql.cj.jdbc.exceptions.PacketTooBigException: Packet for query is too large (1,063 &gt; 1,024). You can change this value on the server by setting the &apos;max_allowed_packet&apos; variable.</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<hr>
+<ul>
+<li><p>原因</p>
+<p>MYSQL会根据配置文件会限制server接受的数据包大小。</p>
+</li>
+</ul>
+<p>有时候在大的插入和更新会被max_allowed_packet参数限制掉，导致失败</p>
+<ul>
+<li><p>fix</p>
+<p>执行SQL语句，查看大小：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">show variables like &apos;%max_allowed_packet%&apos;;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<p>更改大小方法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">set global max_allowed_packet = 2*1024*1024*10;（20M）</span><br></pre></td></tr></table></figure>
+<p>重启linux</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service mysqld restart</span><br></pre></td></tr></table></figure>
+<p>bug fixed!</p>
+
       
     </div>
     
@@ -321,8 +345,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/11/05/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
+              <a href="/2019/11/22/mysql%E4%BD%BF%E7%94%A8%E8%AE%B0%E5%BD%95/" rel="next" title="mysql使用记录">
+                <i class="fa fa-chevron-left"></i> mysql使用记录
               </a>
             
           </div>
@@ -331,8 +355,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/11/22/%E4%BF%AE%E6%94%B9springboot%E9%A1%B9%E7%9B%AE%E4%B8%AD%E7%9A%84tomcat%E7%89%88%E6%9C%AC%E5%8F%B7/" rel="prev" title="修改springboot项目中的tomcat版本号">
-                修改springboot项目中的tomcat版本号 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/11/22/recycleview%20%E6%9B%B4%E6%96%B0%E6%95%B0%E6%8D%AE/" rel="prev" title="recycleview 更新数据">
+                recycleview 更新数据 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -385,8 +409,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -428,6 +461,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#mysql-数据包太小会引发错误信息"><span class="nav-number">1.</span> <span class="nav-text">mysql 数据包太小会引发错误信息</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

@@ -79,14 +79,14 @@
 
 
 
-<meta name="description" content="1:%s&#x2F;from&#x2F;to&#x2F;g">
+<meta name="description" content="*&#x2F;public class CanDragViewpager extends ViewPager { private boolean isCanScroll = true; private boolean isToLogin = false;  private float xT = 0f; private float yT = 0f; private CommonCallBack common">
 <meta property="og:type" content="article">
-<meta property="og:title" content="vim替换命令">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;22&#x2F;vim%E6%9B%BF%E6%8D%A2%E5%91%BD%E4%BB%A4&#x2F;index.html">
+<meta property="og:title" content="禁止滑动ViewPager">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;22&#x2F;%E7%A6%81%E6%AD%A2%E6%BB%91%E5%8A%A8ViewPager&#x2F;index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="1:%s&#x2F;from&#x2F;to&#x2F;g">
+<meta property="og:description" content="*&#x2F;public class CanDragViewpager extends ViewPager { private boolean isCanScroll = true; private boolean isToLogin = false;  private float xT = 0f; private float yT = 0f; private CommonCallBack common">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-11-14T01:55:40.094Z">
+<meta property="og:updated_time" content="2019-04-16T05:19:06.786Z">
 <meta name="twitter:card" content="summary">
 
 
@@ -117,13 +117,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/11/22/vim替换命令/"/>
+  <link rel="canonical" href="http://yoursite.com/2019/11/22/禁止滑动ViewPager/"/>
 
 
 
 
 
-  <title>vim替换命令 | Hexo</title>
+  <title>禁止滑动ViewPager | Hexo</title>
   
 
 
@@ -230,7 +230,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/22/vim%E6%9B%BF%E6%8D%A2%E5%91%BD%E4%BB%A4/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/22/%E7%A6%81%E6%AD%A2%E6%BB%91%E5%8A%A8ViewPager/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="John Doe">
@@ -247,7 +247,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">vim替换命令</h1>
+          <h1 class="post-title" itemprop="name headline">禁止滑动ViewPager</h1>
         
 
         <div class="post-meta">
@@ -259,7 +259,7 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-11-22T19:02:28+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-11-22T19:07:40+08:00">
                 2019-11-22
               </time>
             
@@ -297,7 +297,124 @@
       
 
       
-        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">:%s/from/to/g</span><br></pre></td></tr></table></figure>
+        <p> */<br>public class CanDragViewpager extends ViewPager {</p>
+<pre><code>private boolean isCanScroll = true;
+private boolean isToLogin = false;
+
+private float xT = 0f;
+private float yT = 0f;
+private CommonCallBack commonCallBack;
+
+
+private float initialXValue;
+private float initialYValue;
+
+private SwipeDirection direction;
+private static final int LEFT_TO_RIGHT=1;//方向=从左到右
+private static final int RIGHT_TO_LEFT=2;//方向=从右到左
+public CanDragViewpager(Context context) {
+    super(context);
+}
+
+public CanDragViewpager(Context context, AttributeSet attrs) {
+    super(context, attrs);
+    this.direction = SwipeDirection.all;
+}
+
+public void setScanScroll(boolean isCanScroll) {
+    this.isCanScroll = isCanScroll;
+}
+
+
+public void setToLogin(boolean toLogin) {
+    isToLogin = toLogin;
+}
+
+
+private boolean isY;
+public void setCommonCallBack(CommonCallBack commonCallBack) {
+    this.commonCallBack = commonCallBack;
+}
+
+
+
+int position=1;
+public void setPosition(int position){
+    this.position=position;
+    switch (position){
+        case 0:
+            direction=SwipeDirection.all;
+            break;
+        case 1:
+            if(isCanScroll){
+                direction=SwipeDirection.all;
+            }else {
+                direction=SwipeDirection.right;
+            }
+            break;
+        case 2:
+            direction=SwipeDirection.all;
+            break;
+    }
+}
+
+@Override
+public boolean onTouchEvent(MotionEvent event) {
+    if (this.IsSwipeAllowed(event)) {
+        return super.onTouchEvent(event);
+    }
+    return false;
+}
+
+@Override
+public boolean onInterceptTouchEvent(MotionEvent event) {
+    if (this.IsSwipeAllowed(event)) {
+        return super.onInterceptTouchEvent(event);
+    }
+    return false;
+}
+
+private boolean IsSwipeAllowed(MotionEvent event) {
+    if(this.direction == SwipeDirection.all) return true;
+
+    if(direction == SwipeDirection.none )//disable any swipe
+        return false;
+
+    if(event.getAction()==MotionEvent.ACTION_DOWN) {
+        initialXValue = event.getX();
+        initialYValue = event.getX();
+        return true;
+    }
+
+    if(event.getAction()==MotionEvent.ACTION_MOVE) {
+        try {
+            float diffX = event.getX() - initialXValue;
+            float diffY = event.getY() - initialYValue;
+            if (diffX &gt; 0 &amp;&amp; direction == SwipeDirection.right ) {
+                // swipe from left to right detected
+                if(initialXValue&gt;Math.abs(initialYValue)){
+                    commonCallBack.obtain(null);
+                }
+                return false;
+            }else if (diffX &lt; 0 &amp;&amp; direction == SwipeDirection.left ) {
+                // swipe from right to left detected
+                return false;
+            }
+        } catch (Exception exception) {
+            exception.printStackTrace();
+        }
+    }
+
+    return true;
+}
+public void setAllowedSwipeDirection(SwipeDirection direction) {
+    this.direction = direction;
+}
+
+public static enum SwipeDirection {
+    all, left, right, none ;
+}</code></pre><p>}</p>
+
       
     </div>
     
@@ -321,8 +438,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/11/05/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
+              <a href="/2019/11/22/%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%AE%BE%E7%BD%AEswap%E5%86%85%E5%AD%98/" rel="next" title="服务器设置swap内存">
+                <i class="fa fa-chevron-left"></i> 服务器设置swap内存
               </a>
             
           </div>
@@ -331,8 +448,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/11/22/%E4%BF%AE%E6%94%B9springboot%E9%A1%B9%E7%9B%AE%E4%B8%AD%E7%9A%84tomcat%E7%89%88%E6%9C%AC%E5%8F%B7/" rel="prev" title="修改springboot项目中的tomcat版本号">
-                修改springboot项目中的tomcat版本号 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/11/22/%E5%8E%BB%E9%99%A4view%E4%B8%8A%E9%9D%A2%E7%9A%84runnable/" rel="prev" title="去除view上面的runnable">
+                去除view上面的runnable <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
